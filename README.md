@@ -1,0 +1,1 @@
+# go-claridad-api

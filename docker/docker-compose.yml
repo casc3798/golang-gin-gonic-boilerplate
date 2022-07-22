@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  claridad-db:
+    container_name: claridad-db
+    image: postgres
+    restart: always
+    environment:
+      - POSTGRES_PASSWORD=docker
+      - POSTGRES_USER=docker
+      - POSTGRES_DB=claridad
+    volumes:
+      - claridad-sql:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+volumes:
+  claridad-sql:
